@@ -56,11 +56,12 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--add); outli
 .prayers button { background: var(--btn); border: 3px solid #5A5A5A; border-radius: 18px; padding: 26px 16px; font-size: 52px; font-weight: 700; font-family: var(--f); text-align: center; cursor: pointer; }
 .prayers button.now { border-color: var(--fg); background: #FFFFFF; color: #000000; }
 .prayers button.now::after { content: "עכשיו"; display: block; font-family: var(--ui); font-size: 22px; font-weight: 700; margin-top: 4px; }
-.install { background: var(--add); color: #000000; border: 0; border-radius: 18px; padding: 22px 16px; font-size: 40px; font-weight: 700; cursor: pointer; line-height: 1.25; }
+.install { justify-self: center; background: var(--add); color: #000000; border: 0; border-radius: 999px; padding: 10px 22px; font-size: 22px; font-weight: 700; cursor: pointer; line-height: 1.2; }
 .install span { font-size: 24px; }
+#install span { display: none; }
 .jhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .gear { width: 76px; height: 76px; flex: none; border-radius: 999px; border: 0; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; }
-.install-help { border: 3px solid var(--add); border-radius: 18px; padding: 16px; font-size: 30px; line-height: 1.4; display: grid; gap: 10px; }
+.install-help { border: 2px solid var(--add); border-radius: 14px; padding: 12px; font-size: 22px; line-height: 1.4; display: grid; gap: 8px; }
 .install-help p { margin: 0; }
 .ghost { background: transparent; border: 2px solid #5A5A5A; border-radius: 14px; padding: 14px; font-size: 26px; cursor: pointer; }
 
@@ -121,7 +122,7 @@ input[type="date"] { font-size: 24px; padding: 8px; background: var(--btn); colo
   </div>
   <div class="chips" id="today-tags"></div>
   <div id="override" hidden>מוצג תאריך שנבחר בהגדרות</div>
-  <button type="button" id="install" class="install" hidden>להתקנה במסך הבית<br><span>לחיצה אחת</span></button>
+  <button type="button" id="install" class="install" hidden>התקנה במסך הבית</button>
   <div id="install-help" class="install-help" hidden>
     <p>כדי שהסידור יופיע במסך הבית:</p>
     <p>1. לוחצים על שלוש הנקודות ⋮ למעלה בצד</p>
@@ -185,7 +186,7 @@ input[type="date"] { font-size: 24px; padding: 8px; background: var(--btn); colo
     <div class="row"><input type="date" id="set-date"><button type="button" class="ghost" id="set-date-clear">היום</button></div>
   </section>
   <button type="button" class="ghost" id="set-reset">החזרת ברירת המחדל</button>
-  <button type="button" class="install" data-act="settings-back">חזרה</button>
+  <button type="button" class="ghost" data-act="settings-back" style="font-size:32px;font-weight:700">חזרה</button>
   <p class="small">נוסח אשכנז, מנהג ארץ ישראל. מקור הנוסח: ספריא (Sefaria).</p>
 </div>
 <script>window.__SW__=true;</script>
